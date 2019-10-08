@@ -7,10 +7,10 @@ alias rgrep='grep -rni'
 alias f='find . -iname'
 alias c='clear'
 
-alias sv() {
+function sv() {
 	which nvim > /dev/null && sudo nvim $@ || (which vim > /dev/null && sudo vim $@ || sudo nano $@)
 }
-alias v() {
+function v() {
 	which nvim > /dev/null && nvim $@ || (which vim > /dev/null && vim $@ || nano $@)
 }
 
