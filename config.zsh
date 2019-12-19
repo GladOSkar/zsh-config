@@ -7,7 +7,7 @@ fi
 
 source ~/.zsh.d/theme.zsh
 
-plugins=( git jump zsh-syntax-highlighting )
+plugins=( git jump ) #zsh-syntax-highlighting
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,3 +29,5 @@ export EDITOR=nvim
 
 source ~/.zsh.d/aliases.zsh
 source ~/.zsh.d/keybindings.zsh
+
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
