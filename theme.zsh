@@ -1,4 +1,5 @@
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # root_indicator
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( context dir dir_writable vcs newline custom_indicator )
