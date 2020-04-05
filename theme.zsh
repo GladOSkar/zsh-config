@@ -1,20 +1,9 @@
-ZSH_THEME="powerlevel9k/powerlevel9k"
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# root_indicator
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( context dir dir_writable vcs newline custom_indicator )
+source ${0:a:h}/p10k.zsh
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=( status background_jobs command_execution_time history newline )
+export ZLE_RPROMPT_INDENT=1
 
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
-
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=""
-
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=2
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=1
-
-# ⚡ 🔥 ☢️ %% 🌳 🏎️
-
-POWERLEVEL9K_CUSTOM_INDICATOR="if [[ `id -u` -eq 0 ]]; then echo -n '🔥'; else echo -n '🌳'; fi"
-POWERLEVEL9K_CUSTOM_INDICATOR_BACKGROUND="black"
-POWERLEVEL9K_CUSTOM_INDICATOR_FOREGROUND="yellow"
+ZSH_THEME="powerlevel10k/powerlevel10k"
