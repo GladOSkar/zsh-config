@@ -67,7 +67,7 @@ function eosr() {
     eopkg sr $@ | grep -v "devel" | grep -v "dbginfo"
 }
 
-function it() {
+function sr() {
     which eopkg > /dev/null && eosr $@ || (which apt-cache > /dev/null && apt-cache search $@ || echo "no packet manager found")
 }
 
