@@ -64,7 +64,7 @@ function up() {
 }
 
 function eosr() {
-    eopkg sr $@ | grep -v "devel" | grep -v "dbginfo"
+    (eopkg sr $@ | grep -v "devel" | grep -v "dbginfo") || true
 }
 
 function sr() {
