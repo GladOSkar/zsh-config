@@ -55,33 +55,33 @@
       status                  # exit code of the last command
       command_execution_time  # duration of the last command
       background_jobs         # presence of background jobs
-      direnv                  # direnv status (https://direnv.net/)
-      virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
-      anaconda                # conda environment (https://conda.io/)
-      pyenv                   # python environment (https://github.com/pyenv/pyenv)
-      goenv                   # go environment (https://github.com/syndbg/goenv)
-      nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
-      nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
-      nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
+      # direnv                # direnv status (https://direnv.net/)
+      # virtualenv            # python virtual environment (https://docs.python.org/3/library/venv.html)
+      # anaconda              # conda environment (https://conda.io/)
+      # pyenv                 # python environment (https://github.com/pyenv/pyenv)
+      # goenv                 # go environment (https://github.com/syndbg/goenv)
+      # nodenv                # node.js version from nodenv (https://github.com/nodenv/nodenv)
+      # nvm                   # node.js version from nvm (https://github.com/nvm-sh/nvm)
+      # nodeenv               # node.js environment (https://github.com/ekalinin/nodeenv)
       # node_version          # node.js version
       # go_version            # go version (https://golang.org)
       # rust_version          # rustc version (https://www.rust-lang.org)
       # dotnet_version        # .NET version (https://dotnet.microsoft.com)
-      rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
-      rvm                     # ruby version from rvm (https://rvm.io)
-      fvm                     # flutter version management (https://github.com/leoafarias/fvm)
-      kubecontext             # current kubernetes context (https://kubernetes.io/)
-      terraform               # terraform workspace (https://www.terraform.io)
-      aws                     # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
+      # rbenv                 # ruby version from rbenv (https://github.com/rbenv/rbenv)
+      # rvm                   # ruby version from rvm (https://rvm.io)
+      # fvm                   # flutter version management (https://github.com/leoafarias/fvm)
+      # kubecontext           # current kubernetes context (https://kubernetes.io/)
+      # terraform             # terraform workspace (https://www.terraform.io)
+      # aws                   # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
       # aws_eb_env            # aws elastic beanstalk environment (https://aws.amazon.com/elasticbeanstalk/)
       # azure                 # azure account name (https://docs.microsoft.com/en-us/cli/azure)
       # gcloud                # google cloud acccount and project (https://cloud.google.com/)
-      # context                 # user@hostname
-      nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
-      ranger                  # ranger shell (https://github.com/ranger/ranger)
-      vim_shell               # vim shell indicator (:sh)
+      # context               # user@hostname
+      # nordvpn               # nordvpn connection status, linux only (https://nordvpn.com/)
+      # ranger                # ranger shell (https://github.com/ranger/ranger)
+      # vim_shell             # vim shell indicator (:sh)
       # midnight_commander    # midnight commander shell (https://midnight-commander.org/)
-      vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
+      # vi_mode               # vi mode (you don't need this if you've enabled prompt_char)
       # vpn_ip                # virtual private network indicator
       # ram                   # free RAM
       # load                  # CPU load
@@ -465,7 +465,7 @@
 
   # Status when it's just an error code (e.g., '1'). No need to show it if prompt_char is enabled as
   # it will signify error by turning red.
-  typeset -g POWERLEVEL9K_STATUS_ERROR=false
+  typeset -g POWERLEVEL9K_STATUS_ERROR=true
   typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘ '
   # typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=3
   # typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=1
