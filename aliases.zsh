@@ -40,6 +40,18 @@ function burn() {
     sudo dd if=$1 of=$2 status=progress conv=fsync
 }
 
+function dunst-pause() {
+    notify-send 'Pausing dunst'
+    notify-send DUNST_COMMAND_PAUSE
+    notify-send 'Dunst paused'
+}
+
+function dunst-resume() {
+    notify-send 'Resuming dunst'
+    notify-send DUNST_COMMAND_RESUME
+    notify-send 'Dunst resumed'
+}
+
 # Specialized
 alias clock='mywatch "date +%T | figlet | cowsay -n | lolcat"'
 alias dirt='watch grep -e "Dirty" -e "Writeback" /proc/meminfo'
@@ -78,18 +90,26 @@ function func-l() {
     which exa > /dev/null && exa -1F --group-directories-first $@ || command ls -1 $@
 }
 
-function func-ls() {
-    which exa > /dev/null && exa -laF --group-directories-first $@ || command ls -la $@
+function func-ll() {
+    which exa > /dev/null && exa -lF --group-directories-first $@ || command ls -lh $@
+}
+
+function func-la() {
+    which exa > /dev/null && exa -laF --group-directories-first $@ || command ls -lAh $@
 }
 
 alias l='func-l'
-alias ls='func-ls'
+alias ll='func-ll'
+alias la='func-la'
 
 alias j='jump'
 alias damn='fuck' # This is a family friendly computer!
 alias c='clear'
 alias g='geany'
 alias o='rifle'
+alias ffs='sudo'
+alias please='sudo'
+alias ip='ip -c'
 
 alias ...='../..'
 alias ....='../../..'
